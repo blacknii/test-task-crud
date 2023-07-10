@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "65fee445-6443-41e9-8e00-1dee7cf9b45b",
+		"name": "crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28433407"
+	},
+	"item": [
+		{
+			"name": "\nhttp://localhost/crud-backend/delete.php",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"  pm.expect(pm.response.code).to.eql(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 400ms\", () => {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/crud-backend/delete.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"crud-backend",
+						"delete.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/crud-backend/get.php",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"  pm.expect(pm.response.code).to.eql(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 400ms\", () => {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "\tTestItem",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "count",
+							"value": "\t5",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/crud-backend/get.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"crud-backend",
+						"get.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "-NZvdF1hZ7btHuisrEB3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\nhttp://localhost/crud-backend/add.php",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"  pm.expect(pm.response.code).to.eql(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 400ms\", () => {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "postman-test",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "count",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/crud-backend/add.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"crud-backend",
+						"add.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/crud-backend/edit.php",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"  pm.expect(pm.response.code).to.eql(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 400ms\", () => {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/crud-backend/edit.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"crud-backend",
+						"edit.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
